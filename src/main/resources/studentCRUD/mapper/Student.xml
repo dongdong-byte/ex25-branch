@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.kim.student.mapper.StudentMapper">
+
+    <!-- resultMap 정의 (컬럼-필드 매핑 명확화) -->
+    <resultMap id="studentResultMap" type="Student">
+        <id property="id" column="id"/>
+        <result property="name" column="name"/>
+        <result property="email" column="email"/>
+        <result property="age" column="age"/>
+        <result property="createdAt" column="created_at"/>
+        <result property="updatedAt" column="updated_at"/>
+    </resultMap>
+
+    <!-- 전체 조회 -->
+    <select id="findAll" resultMap="studentResultMap">
+        SELECT
+        id,
+        name,
+        email,
+        age,
+        created_at,
+        updated_at
+        FROM student
+        ORDER BY id DESC
+    </select>
+
+    <!-- 단건 조회 -->
+    <select id="findById" resultMap="studentResultMap">
+        SELECT
+        id,
+        name,
+        email,
+        age,
+        created_at , <!-- DB 컬럼명 -->
+        updated_at
+        FROM student
+        WHERE id = #{id}
+    </select>
+
+    <!-- 등록 -->
+    <insert id="create" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO student (
+        name,
+        email,
+        age,
+        created_at,
+        updated_at
+        )
+        VALUES (
+        #{name},
+        #{email},
+        #{age},
+        NOW(),
+        NOW()
+        )
+    </insert>
+
+    <!-- 수정 -->
+    <update id="update">
+        UPDATE student
+        SET
+        name = #{name},
+        email = #{email},
+        age = #{age},
+        updated_at = NOW()
+        WHERE id = #{id}
+    </update>
+
+    <!-- 삭제 -->
+    <delete id="delete">
+        DELETE FROM student
+        WHERE id = #{id}
+    </delete>
+
+</mapper>
