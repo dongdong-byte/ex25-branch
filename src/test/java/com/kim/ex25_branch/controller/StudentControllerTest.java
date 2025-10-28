@@ -3,6 +3,7 @@ package com.kim.ex25_branch.controller;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import com.kim.ex25_branch.domain.Student;
 import com.kim.ex25_branch.service.StudentService;
 =======
@@ -13,6 +14,10 @@ import com.kim.student.service.StudentService;
 import com.kim.student.domain.Student;
 import com.kim.student.service.StudentService;
 >>>>>>> f2/vaild
+=======
+import com.kim.ex25_branch.domain.Student;
+import com.kim.ex25_branch.service.StudentService;
+>>>>>>> f2/dbconn
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -106,6 +111,7 @@ mockMvc = MockMvcBuilders.standaloneSetup(studentController).build();
 //    when&then get/studentfinal요청
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         mockMvc.perform(get("/templates/student"))
                 .andDo(print())//  요청 응답 출력
                 .andExpect(status().isOk())//200 오케이
@@ -121,6 +127,12 @@ mockMvc = MockMvcBuilders.standaloneSetup(studentController).build();
 >>>>>>> f2/vaild
 =======
 >>>>>>> f2/vaild
+=======
+        mockMvc.perform(get("/templates/student"))
+                .andDo(print())//  요청 응답 출력
+                .andExpect(status().isOk())//200 오케이
+                .andExpect(view().name("templates/student/list"))//뷰 이름확인
+>>>>>>> f2/dbconn
                 .andExpect(model().attributeExists("students"))//  속성존재확인
                 .andExpect(model().attribute("students",testStudentList));// 데이터 확인
 //   verify : Service 메서드가 1번 호출 되었는지 확인
@@ -130,6 +142,7 @@ mockMvc = MockMvcBuilders.standaloneSetup(studentController).build();
     @DisplayName("등록 폼 조회 - 성공")
     void  testCreateForm() throws  Exception{
 //        when&then
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         mockMvc.perform(get("/templates/student/new"))
@@ -149,6 +162,13 @@ mockMvc = MockMvcBuilders.standaloneSetup(studentController).build();
 >>>>>>> f2/vaild
 =======
 >>>>>>> f2/vaild
+=======
+        mockMvc.perform(get("/templates/student/new"))
+                .andDo(print())
+                .andExpect(status().isOk())
+                .andExpect(view().name("templates/student/form"))
+                .andExpect(model().attributeExists("templates/student"));
+>>>>>>> f2/dbconn
 }
 
     @Test
@@ -157,6 +177,7 @@ mockMvc = MockMvcBuilders.standaloneSetup(studentController).build();
 //        given
         when(studentService.getStudent(1L)).thenReturn(testStudent);
 //            when & then
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         mockMvc.perform(get("/templates/student/1/edit"))
@@ -176,6 +197,13 @@ mockMvc = MockMvcBuilders.standaloneSetup(studentController).build();
 >>>>>>> f2/vaild
 =======
 >>>>>>> f2/vaild
+=======
+        mockMvc.perform(get("/templates/student/1/edit"))
+                .andDo(print())
+                .andExpect(status().isOk())
+                .andExpect(view().name("templates/student/form"))
+                .andExpect(model().attribute("templates/student",testStudent));
+>>>>>>> f2/dbconn
         verify(studentService).getStudent(1L);
     }
 
@@ -187,6 +215,7 @@ mockMvc = MockMvcBuilders.standaloneSetup(studentController).build();
 //    when&then
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         mockMvc.perform(post("/templates/student")
 =======
         mockMvc.perform(post("/studentfinal")
@@ -194,11 +223,15 @@ mockMvc = MockMvcBuilders.standaloneSetup(studentController).build();
 =======
         mockMvc.perform(post("/studentfinal")
 >>>>>>> f2/vaild
+=======
+        mockMvc.perform(post("/templates/student")
+>>>>>>> f2/dbconn
                         .param("name","테스트이름")
                         .param("age","99")
                         .param("email","test@test.com"))
                 .andDo(print())
                 .andExpect(status().is3xxRedirection())
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                 .andExpect(redirectedUrl("/templates/student"));
@@ -208,6 +241,9 @@ mockMvc = MockMvcBuilders.standaloneSetup(studentController).build();
 =======
                 .andExpect(redirectedUrl("/studentfinal"));
 >>>>>>> f2/vaild
+=======
+                .andExpect(redirectedUrl("/templates/student"));
+>>>>>>> f2/dbconn
         verify(studentService).createStudent(any(Student.class));
 
     }
@@ -219,6 +255,7 @@ mockMvc = MockMvcBuilders.standaloneSetup(studentController).build();
 //    when&then
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         mockMvc.perform(post("/templates/student")
 =======
         mockMvc.perform(post("/studentfinal")
@@ -226,11 +263,15 @@ mockMvc = MockMvcBuilders.standaloneSetup(studentController).build();
 =======
         mockMvc.perform(post("/studentfinal")
 >>>>>>> f2/vaild
+=======
+        mockMvc.perform(post("/templates/student")
+>>>>>>> f2/dbconn
                         .param("id","1")
                         .param("name" ," 수정된이름")
                         .param("age","77"))
                 .andDo(print())
                 .andExpect(status().is3xxRedirection())
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                 .andExpect(redirectedUrl("/templates/student"));
@@ -240,6 +281,9 @@ mockMvc = MockMvcBuilders.standaloneSetup(studentController).build();
 =======
                 .andExpect(redirectedUrl("/studentfinal"));
 >>>>>>> f2/vaild
+=======
+                .andExpect(redirectedUrl("/templates/student"));
+>>>>>>> f2/dbconn
         verify(studentService).updateStudent(any(Student.class));
 
     }
@@ -251,6 +295,7 @@ mockMvc = MockMvcBuilders.standaloneSetup(studentController).build();
     doNothing().when(studentService).deleteStudent(1L);
     when(studentService.getStudent(1L)).thenReturn(testStudent);
 //    when & then
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     mockMvc.perform(post("/templates/student/1/delete"))
@@ -268,6 +313,12 @@ mockMvc = MockMvcBuilders.standaloneSetup(studentController).build();
 >>>>>>> f2/vaild
 =======
 >>>>>>> f2/vaild
+=======
+    mockMvc.perform(post("/templates/student/1/delete"))
+            .andDo(print())
+            .andExpect(status().is3xxRedirection())
+            .andExpect(redirectedUrl("/templates/student"));
+>>>>>>> f2/dbconn
 
         verify(studentService).deleteStudent(1L);
 }

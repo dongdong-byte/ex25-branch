@@ -3,6 +3,7 @@ package com.kim.ex25_branch.service;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import com.kim.ex25_branch.domain.Student;
 =======
 import com.kim.student.domain.Student;
@@ -10,6 +11,9 @@ import com.kim.student.domain.Student;
 =======
 import com.kim.student.domain.Student;
 >>>>>>> f2/vaild
+=======
+import com.kim.ex25_branch.domain.Student;
+>>>>>>> f2/dbconn
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;

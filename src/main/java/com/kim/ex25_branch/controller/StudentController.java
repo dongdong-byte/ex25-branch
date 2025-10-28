@@ -39,12 +39,17 @@ public class StudentController {
 //
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 // 상수로 정의하면 오타 방지!
 //private static final String REDIRECT_STUDENT = "redirect:/student";
 =======
 >>>>>>> f2/vaild
 =======
 >>>>>>> f2/vaild
+=======
+// 상수로 정의하면 오타 방지!
+//private static final String REDIRECT_STUDENT = "redirect:/student";
+>>>>>>> f2/dbconn
     @GetMapping
     public String list(Model model) {
         log.info("학생 목록 조회 요청");
@@ -88,6 +93,7 @@ public class StudentController {
                 );
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                 return "redirect:/student";
 =======
                 return "redirect:/studentfinal";
@@ -95,6 +101,9 @@ public class StudentController {
 =======
                 return "redirect:/studentfinal";
 >>>>>>> f2/vaild
+=======
+                return "redirect:/student";
+>>>>>>> f2/dbconn
             }
             model.addAttribute("student",student);
             return"student/form";
