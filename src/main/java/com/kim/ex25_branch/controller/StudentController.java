@@ -37,6 +37,8 @@ public class StudentController {
 //    @param model 뷰에 전달할 데이터
 //    @return 목록 페이지
 //
+// 상수로 정의하면 오타 방지!
+//private static final String REDIRECT_STUDENT = "redirect:/student";
     @GetMapping
     public String list(Model model) {
         log.info("학생 목록 조회 요청");
@@ -78,7 +80,7 @@ public class StudentController {
                         "error",
                         "ID" + id + "번 학생을 찾을수가 없습니다."
                 );
-                return "redirect:/studentfinal";
+                return "redirect:/student";
             }
             model.addAttribute("student",student);
             return"student/form";

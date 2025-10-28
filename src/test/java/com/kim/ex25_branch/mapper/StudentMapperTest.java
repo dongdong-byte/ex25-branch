@@ -1,6 +1,6 @@
 package com.kim.ex25_branch.mapper;
 
-import com.kim.student.domain.Student;
+import com.kim.ex25_branch.domain.Student;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

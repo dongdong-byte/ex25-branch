@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>학생 목록</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        table { border-collapse: collapse; width: 100%; margin-top: 20px; }
+        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+        th { background-color: #4CAF50; color: white; }
+        .success { color: green; padding: 10px; background: #d4edda; border-radius: 4px; }
+        .error { color: red; padding: 10px; background: #f8d7da; border-radius: 4px; }
+        .btn { padding: 10px 15px; text-decoration: none; border-radius: 4px; }
+        .btn-primary { background-color: #007bff; color: white; }
+        .btn-warning { background-color: #ffc107; color: black; }
+        .btn-danger { background-color: #dc3545; color: white; }
+    </style>
+</head>
+<body>
+<h1>학생 목록</h1>
+
+<!-- 성공 메시지 -->
+<div th:if="${success}" class="success">
+    <span th:text="${success}"></span>
+</div>
+
+<!-- 에러 메시지 -->
+<div th:if="${error}" class="error">
+    <span th:text="${error}"></span>
+</div>
+
+<!-- 새 학생 등록 버튼 -->
+<a th:href="@{/student/new}" class="btn btn-primary">새 학생 등록</a>
+
+<!-- 학생 목록 테이블 -->
+<table>
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>이름</th>
+        <th>나이</th>
+        <th>이메일</th>
+        <th>작업</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="student : ${students}">
+        <td th:text="${student.id}">1</td>
+        <td th:text="${student.name}">홍길동</td>
+        <td th:text="${student.age}">20</td>
+        <td th:text="${student.email}">test@test.com</td>
+        <td>
+            <a th:href="@{/student/{id}/edit(id=${student.id})}"
+               class="btn btn-warning">수정</a>
+
+            <form th:action="@{/student/{id}/delete(id=${student.id})}"
+                  method="post" style="display:inline;">
+                <button type="submit" class="btn btn-danger"
+                        onclick="return confirm('정말 삭제하시겠습니까?')">삭제</button>
+            </form>
+        </td>
+    </tr>
+    <!-- 데이터가 없을 때 -->
+    <tr th:if="${#lists.isEmpty(students)}">
+        <td colspan="5" style="text-align: center;">등록된 학생이 없습니다.</td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

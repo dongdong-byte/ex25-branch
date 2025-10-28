@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="${student.id == null ? '새 학생 등록' : '학생 정보 수정'}">학생 폼</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .form-group { margin-bottom: 15px; }
+        label { display: block; margin-bottom: 5px; font-weight: bold; }
+        input { padding: 8px; width: 300px; border: 1px solid #ddd; border-radius: 4px; }
+        .error { color: red; font-size: 0.9em; margin-top: 5px; }
+        .btn { padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer; margin-right: 10px; }
+        .btn-primary { background-color: #007bff; color: white; }
+        .btn-secondary { background-color: #6c757d; color: white; text-decoration: none; display: inline-block; }
+    </style>
+</head>
+<body>
+<h1 th:text="${student.id == null ? '새 학생 등록' : '학생 정보 수정'}">학생 폼</h1>
+
+<form th:action="@{/student}" th:object="${student}" method="post">
+    <!-- ID (수정시 hidden) -->
+    <input type="hidden" th:field="*{id}" />
+
+    <!-- 이름 -->
+    <div class="form-group">
+        <label for="name">이름 *</label>
+        <input type="text" id="name" th:field="*{name}" />
+        <div class="error" th:if="${#fields.hasErrors('name')}" th:errors="*{name}">
+            이름 오류
+        </div>
+    </div>
+
+    <!-- 나이 -->
+    <div class="form-group">
+        <label for="age">나이 *</label>
+        <input type="number" id="age" th:field="*{age}" />
+        <div class="error" th:if="${#fields.hasErrors('age')}" th:errors="*{age}">
+            나이 오류
+        </div>
+    </div>
+
+    <!-- 이메일 -->
+    <div class="form-group">
+        <label for="email">이메일 *</label>
+        <input type="email" id="email" th:field="*{email}" />
+        <div class="error" th:if="${#fields.hasErrors('email')}" th:errors="*{email}">
+            이메일 오류
+        </div>
+    </div>
+
+    <!-- 버튼 -->
+    <div>
+        <button type="submit" class="btn btn-primary">저장</button>
+        <a th:href="@{/student}" class="btn btn-secondary">취소</a>
+    </div>
+</form>
+</body>
+</html>
+```
+
+### 3단계: 최종 폴더 구조 확인
+```
+src/
+main/
+resources/
+templates/
+student/           ← 새로 만들기!
+list.html        ← 새로 만들기!
+form.html        ← 새로 만들기!
+studentCRUD/       (기존 것, 무시)

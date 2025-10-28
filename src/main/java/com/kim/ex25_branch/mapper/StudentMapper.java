@@ -10,6 +10,7 @@ import com.kim.ex25_branch.domain.*;
 @Mapper
 public interface StudentMapper {
 //    Create Read(findAll,findById) Update Delete
+    @Select("SELECT id, name, email, age, created_at, updated_at FROM student")
     List<Student> findAll();
 @Select("SELECT\n" +
         "        id,\n" +
