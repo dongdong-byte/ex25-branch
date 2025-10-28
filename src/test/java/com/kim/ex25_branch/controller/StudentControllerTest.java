@@ -94,10 +94,10 @@ mockMvc = MockMvcBuilders.standaloneSetup(studentController).build();
 //        given: Service가 학생 목록을 반환하도록 설정
         when(studentService.getAllStudents()).thenReturn(testStudentList);
 //    when&then get/studentfinal요청
-        mockMvc.perform(get("/student"))
+        mockMvc.perform(get("/templates/student"))
                 .andDo(print())//  요청 응답 출력
                 .andExpect(status().isOk())//200 오케이
-                .andExpect(view().name("student/list"))//뷰 이름확인
+                .andExpect(view().name("templates/student/list"))//뷰 이름확인
                 .andExpect(model().attributeExists("students"))//  속성존재확인
                 .andExpect(model().attribute("students",testStudentList));// 데이터 확인
 //   verify : Service 메서드가 1번 호출 되었는지 확인
@@ -107,11 +107,11 @@ mockMvc = MockMvcBuilders.standaloneSetup(studentController).build();
     @DisplayName("등록 폼 조회 - 성공")
     void  testCreateForm() throws  Exception{
 //        when&then
-        mockMvc.perform(get("/student/new"))
+        mockMvc.perform(get("/templates/student/new"))
                 .andDo(print())
                 .andExpect(status().isOk())
-                .andExpect(view().name("student/form"))
-                .andExpect(model().attributeExists("student"));
+                .andExpect(view().name("templates/student/form"))
+                .andExpect(model().attributeExists("templates/student"));
 }
 
     @Test
@@ -120,11 +120,11 @@ mockMvc = MockMvcBuilders.standaloneSetup(studentController).build();
 //        given
         when(studentService.getStudent(1L)).thenReturn(testStudent);
 //            when & then
-        mockMvc.perform(get("/student/1/edit"))
+        mockMvc.perform(get("/templates/student/1/edit"))
                 .andDo(print())
                 .andExpect(status().isOk())
-                .andExpect(view().name("student/form"))
-                .andExpect(model().attribute("student",testStudent));
+                .andExpect(view().name("templates/student/form"))
+                .andExpect(model().attribute("templates/student",testStudent));
         verify(studentService).getStudent(1L);
     }
 
@@ -134,13 +134,13 @@ mockMvc = MockMvcBuilders.standaloneSetup(studentController).build();
 //       given
         doNothing().when(studentService).createStudent(any(Student.class));
 //    when&then
-        mockMvc.perform(post("/student")
+        mockMvc.perform(post("/templates/student")
                         .param("name","테스트이름")
                         .param("age","99")
                         .param("email","test@test.com"))
                 .andDo(print())
                 .andExpect(status().is3xxRedirection())
-                .andExpect(redirectedUrl("/student"));
+                .andExpect(redirectedUrl("/templates/student"));
         verify(studentService).createStudent(any(Student.class));
 
     }
@@ -150,13 +150,13 @@ mockMvc = MockMvcBuilders.standaloneSetup(studentController).build();
 //        given
         doNothing().when(studentService).updateStudent(any(Student.class));
 //    when&then
-        mockMvc.perform(post("/student")
+        mockMvc.perform(post("/templates/student")
                         .param("id","1")
                         .param("name" ," 수정된이름")
                         .param("age","77"))
                 .andDo(print())
                 .andExpect(status().is3xxRedirection())
-                .andExpect(redirectedUrl("/student"));
+                .andExpect(redirectedUrl("/templates/student"));
         verify(studentService).updateStudent(any(Student.class));
 
     }
@@ -168,10 +168,10 @@ mockMvc = MockMvcBuilders.standaloneSetup(studentController).build();
     doNothing().when(studentService).deleteStudent(1L);
     when(studentService.getStudent(1L)).thenReturn(testStudent);
 //    when & then
-    mockMvc.perform(post("/student/1/delete"))
+    mockMvc.perform(post("/templates/student/1/delete"))
             .andDo(print())
             .andExpect(status().is3xxRedirection())
-            .andExpect(redirectedUrl("/student"));
+            .andExpect(redirectedUrl("/templates/student"));
 
         verify(studentService).deleteStudent(1L);
 }
