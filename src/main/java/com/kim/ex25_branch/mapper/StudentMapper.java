@@ -11,6 +11,7 @@ import com.kim.ex25_branch.domain.*;
 public interface StudentMapper {
 //    Create Read(findAll,findById) Update Delete
 <<<<<<< HEAD
+<<<<<<< HEAD
 //    @Select("SELECT id, name, email, age, created_at, updated_at FROM student")
     List<Student> findAll();
 //@Select("SELECT\n" +
@@ -49,6 +50,8 @@ public interface StudentMapper {
 //@Delete(" DELETE FROM student\n" +
 //        "        WHERE id = #{id}")
 =======
+=======
+>>>>>>> f2/vaild
     List<Student> findAll();
 @Select("SELECT\n" +
         "        id,\n" +
@@ -85,6 +88,9 @@ public interface StudentMapper {
     void update(Student student);
 @Delete(" DELETE FROM student\n" +
         "        WHERE id = #{id}")
+<<<<<<< HEAD
+>>>>>>> f2/vaild
+=======
 >>>>>>> f2/vaild
     void delete(Long id);
 }

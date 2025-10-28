@@ -1,7 +1,11 @@
 package com.kim.ex25_branch.mapper;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import com.kim.ex25_branch.domain.Student;
+=======
+import com.kim.student.domain.Student;
+>>>>>>> f2/vaild
 =======
 import com.kim.student.domain.Student;
 >>>>>>> f2/vaild

@@ -2,8 +2,13 @@ package com.kim.ex25_branch.controller;
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import com.kim.ex25_branch.domain.Student;
 import com.kim.ex25_branch.service.StudentService;
+=======
+import com.kim.student.domain.Student;
+import com.kim.student.service.StudentService;
+>>>>>>> f2/vaild
 =======
 import com.kim.student.domain.Student;
 import com.kim.student.service.StudentService;
@@ -100,15 +105,21 @@ mockMvc = MockMvcBuilders.standaloneSetup(studentController).build();
         when(studentService.getAllStudents()).thenReturn(testStudentList);
 //    when&then get/studentfinal요청
 <<<<<<< HEAD
+<<<<<<< HEAD
         mockMvc.perform(get("/templates/student"))
                 .andDo(print())//  요청 응답 출력
                 .andExpect(status().isOk())//200 오케이
                 .andExpect(view().name("templates/student/list"))//뷰 이름확인
 =======
+=======
+>>>>>>> f2/vaild
         mockMvc.perform(get("/studentfinal"))
                 .andDo(print())//  요청 응답 출력
                 .andExpect(status().isOk())//200 오케이
                 .andExpect(view().name("studentfinal/list"))//뷰 이름확인
+<<<<<<< HEAD
+>>>>>>> f2/vaild
+=======
 >>>>>>> f2/vaild
                 .andExpect(model().attributeExists("students"))//  속성존재확인
                 .andExpect(model().attribute("students",testStudentList));// 데이터 확인
@@ -120,17 +131,23 @@ mockMvc = MockMvcBuilders.standaloneSetup(studentController).build();
     void  testCreateForm() throws  Exception{
 //        when&then
 <<<<<<< HEAD
+<<<<<<< HEAD
         mockMvc.perform(get("/templates/student/new"))
                 .andDo(print())
                 .andExpect(status().isOk())
                 .andExpect(view().name("templates/student/form"))
                 .andExpect(model().attributeExists("templates/student"));
 =======
+=======
+>>>>>>> f2/vaild
         mockMvc.perform(get("/studentfinal/new"))
                 .andDo(print())
                 .andExpect(status().isOk())
                 .andExpect(view().name("studentfinal/form"))
                 .andExpect(model().attributeExists("student"));
+<<<<<<< HEAD
+>>>>>>> f2/vaild
+=======
 >>>>>>> f2/vaild
 }
 
@@ -141,17 +158,23 @@ mockMvc = MockMvcBuilders.standaloneSetup(studentController).build();
         when(studentService.getStudent(1L)).thenReturn(testStudent);
 //            when & then
 <<<<<<< HEAD
+<<<<<<< HEAD
         mockMvc.perform(get("/templates/student/1/edit"))
                 .andDo(print())
                 .andExpect(status().isOk())
                 .andExpect(view().name("templates/student/form"))
                 .andExpect(model().attribute("templates/student",testStudent));
 =======
+=======
+>>>>>>> f2/vaild
         mockMvc.perform(get("/studentfinal/1/edit"))
                 .andDo(print())
                 .andExpect(status().isOk())
                 .andExpect(view().name("studentfinal/form"))
                 .andExpect(model().attribute("student",testStudent));
+<<<<<<< HEAD
+>>>>>>> f2/vaild
+=======
 >>>>>>> f2/vaild
         verify(studentService).getStudent(1L);
     }
@@ -163,7 +186,11 @@ mockMvc = MockMvcBuilders.standaloneSetup(studentController).build();
         doNothing().when(studentService).createStudent(any(Student.class));
 //    when&then
 <<<<<<< HEAD
+<<<<<<< HEAD
         mockMvc.perform(post("/templates/student")
+=======
+        mockMvc.perform(post("/studentfinal")
+>>>>>>> f2/vaild
 =======
         mockMvc.perform(post("/studentfinal")
 >>>>>>> f2/vaild
@@ -173,7 +200,11 @@ mockMvc = MockMvcBuilders.standaloneSetup(studentController).build();
                 .andDo(print())
                 .andExpect(status().is3xxRedirection())
 <<<<<<< HEAD
+<<<<<<< HEAD
                 .andExpect(redirectedUrl("/templates/student"));
+=======
+                .andExpect(redirectedUrl("/studentfinal"));
+>>>>>>> f2/vaild
 =======
                 .andExpect(redirectedUrl("/studentfinal"));
 >>>>>>> f2/vaild
@@ -187,7 +218,11 @@ mockMvc = MockMvcBuilders.standaloneSetup(studentController).build();
         doNothing().when(studentService).updateStudent(any(Student.class));
 //    when&then
 <<<<<<< HEAD
+<<<<<<< HEAD
         mockMvc.perform(post("/templates/student")
+=======
+        mockMvc.perform(post("/studentfinal")
+>>>>>>> f2/vaild
 =======
         mockMvc.perform(post("/studentfinal")
 >>>>>>> f2/vaild
@@ -197,7 +232,11 @@ mockMvc = MockMvcBuilders.standaloneSetup(studentController).build();
                 .andDo(print())
                 .andExpect(status().is3xxRedirection())
 <<<<<<< HEAD
+<<<<<<< HEAD
                 .andExpect(redirectedUrl("/templates/student"));
+=======
+                .andExpect(redirectedUrl("/studentfinal"));
+>>>>>>> f2/vaild
 =======
                 .andExpect(redirectedUrl("/studentfinal"));
 >>>>>>> f2/vaild
@@ -213,15 +252,21 @@ mockMvc = MockMvcBuilders.standaloneSetup(studentController).build();
     when(studentService.getStudent(1L)).thenReturn(testStudent);
 //    when & then
 <<<<<<< HEAD
+<<<<<<< HEAD
     mockMvc.perform(post("/templates/student/1/delete"))
             .andDo(print())
             .andExpect(status().is3xxRedirection())
             .andExpect(redirectedUrl("/templates/student"));
 =======
+=======
+>>>>>>> f2/vaild
     mockMvc.perform(post("/studentfinal/1/delete"))
             .andDo(print())
             .andExpect(status().is3xxRedirection())
             .andExpect(redirectedUrl("/studentfinal"));
+<<<<<<< HEAD
+>>>>>>> f2/vaild
+=======
 >>>>>>> f2/vaild
 
         verify(studentService).deleteStudent(1L);

@@ -38,8 +38,11 @@ public class StudentController {
 //    @return 목록 페이지
 //
 <<<<<<< HEAD
+<<<<<<< HEAD
 // 상수로 정의하면 오타 방지!
 //private static final String REDIRECT_STUDENT = "redirect:/student";
+=======
+>>>>>>> f2/vaild
 =======
 >>>>>>> f2/vaild
     @GetMapping
@@ -84,7 +87,11 @@ public class StudentController {
                         "ID" + id + "번 학생을 찾을수가 없습니다."
                 );
 <<<<<<< HEAD
+<<<<<<< HEAD
                 return "redirect:/student";
+=======
+                return "redirect:/studentfinal";
+>>>>>>> f2/vaild
 =======
                 return "redirect:/studentfinal";
 >>>>>>> f2/vaild
