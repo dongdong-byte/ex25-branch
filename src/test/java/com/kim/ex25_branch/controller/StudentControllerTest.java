@@ -1,8 +1,8 @@
 package com.kim.ex25_branch.controller;
 
 
-import com.kim.student.domain.Student;
-import com.kim.student.service.StudentService;
+import com.kim.ex25_branch.domain.Student;
+import com.kim.ex25_branch.service.StudentService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;

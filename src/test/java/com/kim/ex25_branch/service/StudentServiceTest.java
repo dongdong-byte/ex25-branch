@@ -1,7 +1,7 @@
 package com.kim.ex25_branch.service;
 
 
-import com.kim.student.domain.Student;
+import com.kim.ex25_branch.domain.Student;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
