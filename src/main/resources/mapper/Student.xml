@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.kim.ex25_branch.mapper.StudentMapper">
+
+    <!-- resultMap 정의 (컬럼-필드 매핑 명확화) -->
+    <resultMap id="studentResultMap" type="Student">
+        <id property="id" column="id"/>
+        <result property="name" column="name"/>
+        <result property="email" column="email"/>
+        <result property="age" column="age"/>
+        <result property="createdAt" column="created_at"/>
+        <result property="updatedAt" column="updated_at"/>
+    </resultMap>
+
+<!--    &lt;!&ndash; 전체 조회 &ndash;&gt;-->
+    <select id="findAll" resultMap="studentResultMap">
+        SELECT
+        id,
+        name,
+        email,
+        age,
+        created_at,
+        updated_at
+        FROM student
+        ORDER BY id DESC
+    </select>
+
+<!--    &lt;!&ndash; 단건 조회 &ndash;&gt;-->
+    <select id="findById" resultMap="studentResultMap">
+        SELECT
+        id,
+        name,
+        email,
+        age,
+        created_at , <!-- DB 컬럼명 -->
+        updated_at
+        FROM student
+        WHERE id = #{id}
+    </select>
+
+<!--    &lt;!&ndash; 등록 &ndash;&gt;-->
+    <insert id="create" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO student (
+        name,
+        email,
+        age,
+        created_at,
+        updated_at
+        )
+        VALUES (
+        #{name},
+        #{email},
+        #{age},
+        NOW(),
+        NOW()
+        )
+    </insert>
+
+<!--    &lt;!&ndash; 수정 &ndash;&gt;-->
+    <update id="update">
+        UPDATE student
+        SET
+        name = #{name},
+        email = #{email},
+        age = #{age},
+        updated_at = NOW()
+        WHERE id = #{id}
+    </update>
+
+<!--    &lt;!&ndash; 삭제 &ndash;&gt;-->
+    <delete id="delete">
+        DELETE FROM student
+        WHERE id = #{id}
+    </delete>
+
+</mapper>
