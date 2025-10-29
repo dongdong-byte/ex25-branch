@@ -25,7 +25,7 @@
 <div th:if="${error}" class="alert alert-error" th:text="${error}"></div>
 
 <!-- 등록 버튼 -->
-<a href="/studentfinal/new" class="btn btn-primary">➕ 새 학생 등록</a>
+<a href="/student/new" class="btn btn-primary">➕ 새 학생 등록</a>
 
 <!-- 학생 테이블 -->
 <table>
@@ -47,8 +47,8 @@
         <td th:text="${student.email}">test@test.com</td>
         <td th:text="${#temporals.format(student.createdAt, 'yyyy-MM-dd HH:mm')}">2024-01-01</td>
         <td>
-            <a th:href="@{/studentfinal/{id}/edit(id=${student.id})}" class="btn btn-warning">✏️ 수정</a>
-            <form th:action="@{/studentfinal/{id}/delete(id=${student.id})}" method="post" style="display: inline;">
+            <a th:href="@{/student/{id}/edit(id=${student.id})}" class="btn btn-warning">✏️ 수정</a>
+            <form th:action="@{/student/{id}/delete(id=${student.id})}" method="post" style="display: inline;">
                 <button type="submit" class="btn btn-danger" onclick="return confirm('정말 삭제하시겠습니까?');">🗑️ 삭제</button>
             </form>
         </td>
