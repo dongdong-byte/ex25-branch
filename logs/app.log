@@ -951,3 +951,99 @@ java.lang.IllegalStateException: ApplicationContext failure threshold (1) exceed
 2025-10-29T11:24:41.274+09:00  INFO 1020 --- [ex25-branch] [restartedMain] c.kim.ex25_branch.Ex25BranchApplication  : Started Ex25BranchApplication in 1.38 seconds (process running for 1.756)
 2025-10-29T12:01:34.476+09:00  INFO 1020 --- [ex25-branch] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
 2025-10-29T12:01:34.479+09:00  INFO 1020 --- [ex25-branch] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-10-29T12:18:59.537+09:00  INFO 4980 --- [ex25-branch] [restartedMain] c.kim.ex25_branch.Ex25BranchApplication  : Starting Ex25BranchApplication using Java 21.0.8 with PID 4980 (D:\s09_SpringBoot\ex25-branch\build\classes\java\main started by YONSAI in D:\s09_SpringBoot\ex25-branch)
+2025-10-29T12:18:59.538+09:00 DEBUG 4980 --- [ex25-branch] [restartedMain] c.kim.ex25_branch.Ex25BranchApplication  : Running with Spring Boot v3.5.6, Spring v6.2.11
+2025-10-29T12:18:59.538+09:00  INFO 4980 --- [ex25-branch] [restartedMain] c.kim.ex25_branch.Ex25BranchApplication  : No active profile set, falling back to 1 default profile: "default"
+2025-10-29T12:18:59.564+09:00  INFO 4980 --- [ex25-branch] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-10-29T12:18:59.565+09:00  INFO 4980 --- [ex25-branch] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-10-29T12:19:00.167+09:00  INFO 4980 --- [ex25-branch] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8090 (http)
+2025-10-29T12:19:00.176+09:00  INFO 4980 --- [ex25-branch] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-29T12:19:00.176+09:00  INFO 4980 --- [ex25-branch] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-10-29T12:19:00.202+09:00  INFO 4980 --- [ex25-branch] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-29T12:19:00.202+09:00  INFO 4980 --- [ex25-branch] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 637 ms
+2025-10-29T12:19:00.634+09:00  INFO 4980 --- [ex25-branch] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-10-29T12:19:00.656+09:00  INFO 4980 --- [ex25-branch] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8090 (http) with context path '/'
+2025-10-29T12:19:00.661+09:00  INFO 4980 --- [ex25-branch] [restartedMain] c.kim.ex25_branch.Ex25BranchApplication  : Started Ex25BranchApplication in 1.391 seconds (process running for 1.782)
+2025-10-29T12:19:04.430+09:00  INFO 4980 --- [ex25-branch] [http-nio-8090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-29T12:19:04.430+09:00  INFO 4980 --- [ex25-branch] [http-nio-8090-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-10-29T12:19:04.430+09:00  INFO 4980 --- [ex25-branch] [http-nio-8090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2025-10-29T12:24:02.321+09:00  INFO 4980 --- [ex25-branch] [http-nio-8090-exec-8] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-10-29T12:24:02.380+09:00  INFO 4980 --- [ex25-branch] [http-nio-8090-exec-8] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.mariadb.jdbc.Connection@3fec77e7
+2025-10-29T12:24:02.382+09:00  INFO 4980 --- [ex25-branch] [http-nio-8090-exec-8] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-10-29T12:43:53.930+09:00  INFO 4980 --- [ex25-branch] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2025-10-29T12:43:53.933+09:00  INFO 4980 --- [ex25-branch] [Thread-5] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-10-29T12:43:53.935+09:00  INFO 4980 --- [ex25-branch] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-10-29T12:43:53.938+09:00  INFO 4980 --- [ex25-branch] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-10-29T12:43:53.940+09:00  INFO 4980 --- [ex25-branch] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-10-29T12:43:53.993+09:00  INFO 4980 --- [ex25-branch] [restartedMain] c.kim.ex25_branch.Ex25BranchApplication  : Starting Ex25BranchApplication using Java 21.0.8 with PID 4980 (D:\s09_SpringBoot\ex25-branch\build\classes\java\main started by YONSAI in D:\s09_SpringBoot\ex25-branch)
+2025-10-29T12:43:53.993+09:00 DEBUG 4980 --- [ex25-branch] [restartedMain] c.kim.ex25_branch.Ex25BranchApplication  : Running with Spring Boot v3.5.6, Spring v6.2.11
+2025-10-29T12:43:53.993+09:00  INFO 4980 --- [ex25-branch] [restartedMain] c.kim.ex25_branch.Ex25BranchApplication  : No active profile set, falling back to 1 default profile: "default"
+2025-10-29T12:43:54.151+09:00  INFO 4980 --- [ex25-branch] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8090 (http)
+2025-10-29T12:43:54.152+09:00  INFO 4980 --- [ex25-branch] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-29T12:43:54.152+09:00  INFO 4980 --- [ex25-branch] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-10-29T12:43:54.163+09:00  INFO 4980 --- [ex25-branch] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-29T12:43:54.163+09:00  INFO 4980 --- [ex25-branch] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 169 ms
+2025-10-29T12:43:54.268+09:00  INFO 4980 --- [ex25-branch] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-10-29T12:43:54.275+09:00  INFO 4980 --- [ex25-branch] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8090 (http) with context path '/'
+2025-10-29T12:43:54.276+09:00  INFO 4980 --- [ex25-branch] [restartedMain] c.kim.ex25_branch.Ex25BranchApplication  : Started Ex25BranchApplication in 0.302 seconds (process running for 1495.397)
+2025-10-29T12:43:54.277+09:00  INFO 4980 --- [ex25-branch] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-10-29T12:44:04.229+09:00  INFO 4980 --- [ex25-branch] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-10-29T12:44:04.230+09:00  INFO 4980 --- [ex25-branch] [Thread-7] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-10-29T12:44:04.232+09:00  INFO 4980 --- [ex25-branch] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-10-29T12:44:04.303+09:00  INFO 4980 --- [ex25-branch] [restartedMain] c.kim.ex25_branch.Ex25BranchApplication  : Starting Ex25BranchApplication using Java 21.0.8 with PID 4980 (D:\s09_SpringBoot\ex25-branch\build\classes\java\main started by YONSAI in D:\s09_SpringBoot\ex25-branch)
+2025-10-29T12:44:04.303+09:00 DEBUG 4980 --- [ex25-branch] [restartedMain] c.kim.ex25_branch.Ex25BranchApplication  : Running with Spring Boot v3.5.6, Spring v6.2.11
+2025-10-29T12:44:04.303+09:00  INFO 4980 --- [ex25-branch] [restartedMain] c.kim.ex25_branch.Ex25BranchApplication  : No active profile set, falling back to 1 default profile: "default"
+2025-10-29T12:44:04.436+09:00  INFO 4980 --- [ex25-branch] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8090 (http)
+2025-10-29T12:44:04.437+09:00  INFO 4980 --- [ex25-branch] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-29T12:44:04.437+09:00  INFO 4980 --- [ex25-branch] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-10-29T12:44:04.447+09:00  INFO 4980 --- [ex25-branch] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-29T12:44:04.447+09:00  INFO 4980 --- [ex25-branch] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 143 ms
+2025-10-29T12:44:04.527+09:00  INFO 4980 --- [ex25-branch] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-10-29T12:44:04.533+09:00  INFO 4980 --- [ex25-branch] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8090 (http) with context path '/'
+2025-10-29T12:44:04.535+09:00  INFO 4980 --- [ex25-branch] [restartedMain] c.kim.ex25_branch.Ex25BranchApplication  : Started Ex25BranchApplication in 0.247 seconds (process running for 1505.655)
+2025-10-29T12:44:04.535+09:00  INFO 4980 --- [ex25-branch] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-10-29T12:47:45.198+09:00  INFO 4980 --- [ex25-branch] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-10-29T12:47:45.199+09:00  INFO 4980 --- [ex25-branch] [Thread-11] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-10-29T12:47:45.199+09:00  INFO 4980 --- [ex25-branch] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-10-29T12:47:45.267+09:00  INFO 4980 --- [ex25-branch] [restartedMain] c.kim.ex25_branch.Ex25BranchApplication  : Starting Ex25BranchApplication using Java 21.0.8 with PID 4980 (D:\s09_SpringBoot\ex25-branch\build\classes\java\main started by YONSAI in D:\s09_SpringBoot\ex25-branch)
+2025-10-29T12:47:45.268+09:00 DEBUG 4980 --- [ex25-branch] [restartedMain] c.kim.ex25_branch.Ex25BranchApplication  : Running with Spring Boot v3.5.6, Spring v6.2.11
+2025-10-29T12:47:45.268+09:00  INFO 4980 --- [ex25-branch] [restartedMain] c.kim.ex25_branch.Ex25BranchApplication  : No active profile set, falling back to 1 default profile: "default"
+2025-10-29T12:47:45.393+09:00  INFO 4980 --- [ex25-branch] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8090 (http)
+2025-10-29T12:47:45.394+09:00  INFO 4980 --- [ex25-branch] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-29T12:47:45.394+09:00  INFO 4980 --- [ex25-branch] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-10-29T12:47:45.399+09:00  INFO 4980 --- [ex25-branch] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-29T12:47:45.399+09:00  INFO 4980 --- [ex25-branch] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 130 ms
+2025-10-29T12:47:45.480+09:00  INFO 4980 --- [ex25-branch] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-10-29T12:47:45.485+09:00  INFO 4980 --- [ex25-branch] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8090 (http) with context path '/'
+2025-10-29T12:47:45.487+09:00  INFO 4980 --- [ex25-branch] [restartedMain] c.kim.ex25_branch.Ex25BranchApplication  : Started Ex25BranchApplication in 0.238 seconds (process running for 1726.607)
+2025-10-29T12:47:45.487+09:00  INFO 4980 --- [ex25-branch] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-10-29T12:58:57.321+09:00  INFO 4980 --- [ex25-branch] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-10-29T12:58:57.322+09:00  INFO 4980 --- [ex25-branch] [Thread-15] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-10-29T12:58:57.324+09:00  INFO 4980 --- [ex25-branch] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-10-29T12:58:57.387+09:00  INFO 4980 --- [ex25-branch] [restartedMain] c.kim.ex25_branch.Ex25BranchApplication  : Starting Ex25BranchApplication using Java 21.0.8 with PID 4980 (D:\s09_SpringBoot\ex25-branch\build\classes\java\main started by YONSAI in D:\s09_SpringBoot\ex25-branch)
+2025-10-29T12:58:57.387+09:00 DEBUG 4980 --- [ex25-branch] [restartedMain] c.kim.ex25_branch.Ex25BranchApplication  : Running with Spring Boot v3.5.6, Spring v6.2.11
+2025-10-29T12:58:57.388+09:00  INFO 4980 --- [ex25-branch] [restartedMain] c.kim.ex25_branch.Ex25BranchApplication  : No active profile set, falling back to 1 default profile: "default"
+2025-10-29T12:58:57.507+09:00  INFO 4980 --- [ex25-branch] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8090 (http)
+2025-10-29T12:58:57.507+09:00  INFO 4980 --- [ex25-branch] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-29T12:58:57.507+09:00  INFO 4980 --- [ex25-branch] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-10-29T12:58:57.517+09:00  INFO 4980 --- [ex25-branch] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-29T12:58:57.517+09:00  INFO 4980 --- [ex25-branch] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 128 ms
+2025-10-29T12:58:57.590+09:00  INFO 4980 --- [ex25-branch] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-10-29T12:58:57.595+09:00  INFO 4980 --- [ex25-branch] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8090 (http) with context path '/'
+2025-10-29T12:58:57.597+09:00  INFO 4980 --- [ex25-branch] [restartedMain] c.kim.ex25_branch.Ex25BranchApplication  : Started Ex25BranchApplication in 0.223 seconds (process running for 2398.717)
+2025-10-29T12:58:57.597+09:00  INFO 4980 --- [ex25-branch] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-10-29T13:04:24.706+09:00  INFO 4980 --- [ex25-branch] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-10-29T13:04:24.706+09:00  INFO 4980 --- [ex25-branch] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-10-29T13:04:26.602+09:00  INFO 3692 --- [ex25-branch] [restartedMain] c.kim.ex25_branch.Ex25BranchApplication  : Starting Ex25BranchApplication using Java 21.0.8 with PID 3692 (D:\s09_SpringBoot\ex25-branch\build\classes\java\main started by YONSAI in D:\s09_SpringBoot\ex25-branch)
+2025-10-29T13:04:26.604+09:00 DEBUG 3692 --- [ex25-branch] [restartedMain] c.kim.ex25_branch.Ex25BranchApplication  : Running with Spring Boot v3.5.6, Spring v6.2.11
+2025-10-29T13:04:26.604+09:00  INFO 3692 --- [ex25-branch] [restartedMain] c.kim.ex25_branch.Ex25BranchApplication  : No active profile set, falling back to 1 default profile: "default"
+2025-10-29T13:04:26.631+09:00  INFO 3692 --- [ex25-branch] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-10-29T13:04:26.631+09:00  INFO 3692 --- [ex25-branch] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-10-29T13:04:27.222+09:00  INFO 3692 --- [ex25-branch] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8090 (http)
+2025-10-29T13:04:27.239+09:00  INFO 3692 --- [ex25-branch] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-29T13:04:27.239+09:00  INFO 3692 --- [ex25-branch] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-10-29T13:04:27.265+09:00  INFO 3692 --- [ex25-branch] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-29T13:04:27.265+09:00  INFO 3692 --- [ex25-branch] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 634 ms
+2025-10-29T13:04:27.675+09:00  INFO 3692 --- [ex25-branch] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-10-29T13:04:27.690+09:00  INFO 3692 --- [ex25-branch] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8090 (http) with context path '/'
+2025-10-29T13:04:27.706+09:00  INFO 3692 --- [ex25-branch] [restartedMain] c.kim.ex25_branch.Ex25BranchApplication  : Started Ex25BranchApplication in 1.371 seconds (process running for 1.74)
