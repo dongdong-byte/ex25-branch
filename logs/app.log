@@ -1265,3 +1265,5 @@ java.lang.IllegalStateException: ApplicationContext failure threshold (1) exceed
 2025-10-29T15:50:18.984+09:00  INFO 15132 --- [ex25-branch] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8090 (http) with context path '/'
 2025-10-29T15:50:18.986+09:00  INFO 15132 --- [ex25-branch] [restartedMain] c.kim.ex25_branch.Ex25BranchApplication  : Started Ex25BranchApplication in 0.305 seconds (process running for 2494.035)
 2025-10-29T15:50:18.987+09:00  INFO 15132 --- [ex25-branch] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-10-29T17:29:31.286+09:00  INFO 15132 --- [ex25-branch] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-10-29T17:29:31.289+09:00  INFO 15132 --- [ex25-branch] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
