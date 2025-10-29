@@ -1,23 +1,9 @@
 package com.kim.ex25_branch.controller;
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 import com.kim.ex25_branch.domain.Student;
 import com.kim.ex25_branch.service.StudentService;
-=======
-import com.kim.student.domain.Student;
-import com.kim.student.service.StudentService;
->>>>>>> f2/vaild
-=======
-import com.kim.student.domain.Student;
-import com.kim.student.service.StudentService;
->>>>>>> f2/vaild
-=======
-import com.kim.ex25_branch.domain.Student;
-import com.kim.ex25_branch.service.StudentService;
->>>>>>> f2/dbconn
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -109,35 +95,7 @@ mockMvc = MockMvcBuilders.standaloneSetup(studentController).build();
 //        given: Service가 학생 목록을 반환하도록 설정
         when(studentService.getAllStudents()).thenReturn(testStudentList);
 //    when&then get/studentfinal요청
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-        mockMvc.perform(get("/templates/student"))
-                .andDo(print())//  요청 응답 출력
-                .andExpect(status().isOk())//200 오케이
-                .andExpect(view().name("templates/student/list"))//뷰 이름확인
-=======
-=======
->>>>>>> f2/vaild
-        mockMvc.perform(get("/studentfinal"))
-                .andDo(print())//  요청 응답 출력
-                .andExpect(status().isOk())//200 오케이
-                .andExpect(view().name("studentfinal/list"))//뷰 이름확인
-<<<<<<< HEAD
->>>>>>> f2/vaild
-=======
->>>>>>> f2/vaild
-=======
-        mockMvc.perform(get("/templates/student"))
-                .andDo(print())//  요청 응답 출력
-                .andExpect(status().isOk())//200 오케이
-                .andExpect(view().name("templates/student/list"))//뷰 이름확인
->>>>>>> f2/dbconn
-                .andExpect(model().attributeExists("students"))//  속성존재확인
-                .andExpect(model().attribute("students",testStudentList));// 데이터 확인
-//   verify : Service 메서드가 1번 호출 되었는지 확인
-        verify(studentService ,times(1)).getAllStudents();
-    }
+
     @Test
     @DisplayName("등록 폼 조회 - 성공")
     void  testCreateForm() throws  Exception{
@@ -150,25 +108,7 @@ mockMvc = MockMvcBuilders.standaloneSetup(studentController).build();
                 .andExpect(status().isOk())
                 .andExpect(view().name("templates/student/form"))
                 .andExpect(model().attributeExists("templates/student"));
-=======
-=======
->>>>>>> f2/vaild
-        mockMvc.perform(get("/studentfinal/new"))
-                .andDo(print())
-                .andExpect(status().isOk())
-                .andExpect(view().name("studentfinal/form"))
-                .andExpect(model().attributeExists("student"));
-<<<<<<< HEAD
->>>>>>> f2/vaild
-=======
->>>>>>> f2/vaild
-=======
-        mockMvc.perform(get("/templates/student/new"))
-                .andDo(print())
-                .andExpect(status().isOk())
-                .andExpect(view().name("templates/student/form"))
-                .andExpect(model().attributeExists("templates/student"));
->>>>>>> f2/dbconn
+
 }
 
     @Test
@@ -177,9 +117,7 @@ mockMvc = MockMvcBuilders.standaloneSetup(studentController).build();
 //        given
         when(studentService.getStudent(1L)).thenReturn(testStudent);
 //            when & then
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+
         mockMvc.perform(get("/templates/student/1/edit"))
                 .andDo(print())
                 .andExpect(status().isOk())
