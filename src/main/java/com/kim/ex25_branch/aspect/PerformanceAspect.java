@@ -12,7 +12,7 @@ import org.springframework.stereotype.Component;
 public class PerformanceAspect {
 
 
-    @Around("execution(* com.kim.ex25_branch.service.*.*(..)")
+    @Around("execution(* com.kim.ex25_branch.service.*.*(..))")
     public Object measureTime(ProceedingJoinPoint joinPoint) throws Throwable {
         long start = System.currentTimeMillis();
 //        시스템이 가지고 있는 천단위를 세라
