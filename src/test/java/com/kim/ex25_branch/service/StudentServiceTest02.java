@@ -2,6 +2,8 @@ package com.kim.ex25_branch.service;
 
 
 
+import com.kim.ex25_branch.domain.StudentTest;
+import com.kim.ex25_branch.mapper.StudentMapperTest02;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.mybatis.spring.boot.test.autoconfigure.MybatisTest;

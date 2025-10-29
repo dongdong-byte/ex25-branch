@@ -1,6 +1,7 @@
 package com.kim.ex25_branch.mapper;
 
 
+import com.kim.ex25_branch.domain.StudentTest;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Options;

@@ -4,18 +4,15 @@ package com.kim.ex25_branch.domain;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotBlank;
-
-import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
-import lombok.NoArgsConstructor;
+import org.junit.jupiter.api.Test;
+
 
 import java.time.LocalDateTime;
 
 @Data
 @Builder
-@AllArgsConstructor
-@NoArgsConstructor
 public class StudentTest {
     private Long id;
     @NotBlank(message = "이름은 필수항목")
