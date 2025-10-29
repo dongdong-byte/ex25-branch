@@ -949,3 +949,5 @@ java.lang.IllegalStateException: ApplicationContext failure threshold (1) exceed
 2025-10-29T11:24:41.249+09:00  INFO 1020 --- [ex25-branch] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
 2025-10-29T11:24:41.269+09:00  INFO 1020 --- [ex25-branch] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8090 (http) with context path '/'
 2025-10-29T11:24:41.274+09:00  INFO 1020 --- [ex25-branch] [restartedMain] c.kim.ex25_branch.Ex25BranchApplication  : Started Ex25BranchApplication in 1.38 seconds (process running for 1.756)
+2025-10-29T12:01:34.476+09:00  INFO 1020 --- [ex25-branch] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-10-29T12:01:34.479+09:00  INFO 1020 --- [ex25-branch] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
