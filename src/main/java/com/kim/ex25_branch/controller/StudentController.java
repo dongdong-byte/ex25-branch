@@ -27,7 +27,7 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
  */
 
 @Slf4j
-@Controller("day1026StudentController")
+@Controller
 @RequestMapping("/student")
 @RequiredArgsConstructor
 public class StudentController {

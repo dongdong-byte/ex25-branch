@@ -28,7 +28,7 @@ import java.util.List;
  * DELETE /api/students/{id} → 삭제
  */
 
-@RestController("day1026StudentRestController")
+@RestController
 @Slf4j
 @RequiredArgsConstructor
 @RequestMapping("/api/students")
