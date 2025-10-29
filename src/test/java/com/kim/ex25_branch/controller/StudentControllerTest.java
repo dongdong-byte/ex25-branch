@@ -91,174 +91,96 @@ mockMvc = MockMvcBuilders.standaloneSetup(studentController).build();
     }
     @Test
     @DisplayName("목록 조회 성공")
-    void  testList()throws  Exception{
+    void  testList()throws  Exception {
 //        given: Service가 학생 목록을 반환하도록 설정
         when(studentService.getAllStudents()).thenReturn(testStudentList);
 //    when&then get/studentfinal요청
-
-    @Test
-    @DisplayName("등록 폼 조회 - 성공")
-    void  testCreateForm() throws  Exception{
+    }
+        @Test
+        @DisplayName("등록 폼 조회 - 성공")
+        void testCreateForm () throws Exception {
 //        when&then
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-        mockMvc.perform(get("/templates/student/new"))
-                .andDo(print())
-                .andExpect(status().isOk())
-                .andExpect(view().name("templates/student/form"))
-                .andExpect(model().attributeExists("templates/student"));
 
-}
+            mockMvc.perform(get("/templates/student/new"))
+                    .andDo(print())
+                    .andExpect(status().isOk())
+                    .andExpect(view().name("templates/student/form"))
+                    .andExpect(model().attributeExists("templates/student"));
 
-    @Test
-    @DisplayName("수정폼 조회 - 성공")
-    void  testEditForm_Success() throws  Exception{
+        }
+
+        @Test
+        @DisplayName("수정폼 조회 - 성공")
+        void testEditForm_Success () throws Exception {
 //        given
-        when(studentService.getStudent(1L)).thenReturn(testStudent);
+            when(studentService.getStudent(1L)).thenReturn(testStudent);
 //            when & then
 
-        mockMvc.perform(get("/templates/student/1/edit"))
-                .andDo(print())
-                .andExpect(status().isOk())
-                .andExpect(view().name("templates/student/form"))
-                .andExpect(model().attribute("templates/student",testStudent));
-=======
-=======
->>>>>>> f2/vaild
-        mockMvc.perform(get("/studentfinal/1/edit"))
-                .andDo(print())
-                .andExpect(status().isOk())
-                .andExpect(view().name("studentfinal/form"))
-                .andExpect(model().attribute("student",testStudent));
-<<<<<<< HEAD
->>>>>>> f2/vaild
-=======
->>>>>>> f2/vaild
-=======
-        mockMvc.perform(get("/templates/student/1/edit"))
-                .andDo(print())
-                .andExpect(status().isOk())
-                .andExpect(view().name("templates/student/form"))
-                .andExpect(model().attribute("templates/student",testStudent));
->>>>>>> f2/dbconn
-        verify(studentService).getStudent(1L);
-    }
+            mockMvc.perform(get("/templates/student/1/edit"))
+                    .andDo(print())
+                    .andExpect(status().isOk())
+                    .andExpect(view().name("templates/student/form"))
+                    .andExpect(model().attribute("templates/student", testStudent));
 
-    @Test
-    @DisplayName("학생 등록 - 성공")
-    void  testSave_Create() throws  Exception{
+            verify(studentService).getStudent(1L);
+        }
+
+        @Test
+        @DisplayName("학생 등록 - 성공")
+        void testSave_Create () throws Exception {
 //       given
-        doNothing().when(studentService).createStudent(any(Student.class));
+            doNothing().when(studentService).createStudent(any(Student.class));
 //    when&then
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-        mockMvc.perform(post("/templates/student")
-=======
-        mockMvc.perform(post("/studentfinal")
->>>>>>> f2/vaild
-=======
-        mockMvc.perform(post("/studentfinal")
->>>>>>> f2/vaild
-=======
-        mockMvc.perform(post("/templates/student")
->>>>>>> f2/dbconn
-                        .param("name","테스트이름")
-                        .param("age","99")
-                        .param("email","test@test.com"))
-                .andDo(print())
-                .andExpect(status().is3xxRedirection())
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-                .andExpect(redirectedUrl("/templates/student"));
-=======
-                .andExpect(redirectedUrl("/studentfinal"));
->>>>>>> f2/vaild
-=======
-                .andExpect(redirectedUrl("/studentfinal"));
->>>>>>> f2/vaild
-=======
-                .andExpect(redirectedUrl("/templates/student"));
->>>>>>> f2/dbconn
-        verify(studentService).createStudent(any(Student.class));
 
-    }
-    @Test
-    @DisplayName("학생 수정 - 성공")
-    void  testSave_Update()throws Exception{
+            mockMvc.perform(post("/templates/student")
+
+                            .param("name", "테스트이름")
+                            .param("age", "99")
+                            .param("email", "test@test.com"))
+                    .andDo(print())
+                    .andExpect(status().is3xxRedirection())
+
+                    .andExpect(redirectedUrl("/templates/student"));
+
+            verify(studentService).createStudent(any(Student.class));
+
+        }
+        @Test
+        @DisplayName("학생 수정 - 성공")
+        void testSave_Update ()throws Exception {
 //        given
-        doNothing().when(studentService).updateStudent(any(Student.class));
+            doNothing().when(studentService).updateStudent(any(Student.class));
 //    when&then
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-        mockMvc.perform(post("/templates/student")
-=======
-        mockMvc.perform(post("/studentfinal")
->>>>>>> f2/vaild
-=======
-        mockMvc.perform(post("/studentfinal")
->>>>>>> f2/vaild
-=======
-        mockMvc.perform(post("/templates/student")
->>>>>>> f2/dbconn
-                        .param("id","1")
-                        .param("name" ," 수정된이름")
-                        .param("age","77"))
-                .andDo(print())
-                .andExpect(status().is3xxRedirection())
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-                .andExpect(redirectedUrl("/templates/student"));
-=======
-                .andExpect(redirectedUrl("/studentfinal"));
->>>>>>> f2/vaild
-=======
-                .andExpect(redirectedUrl("/studentfinal"));
->>>>>>> f2/vaild
-=======
-                .andExpect(redirectedUrl("/templates/student"));
->>>>>>> f2/dbconn
-        verify(studentService).updateStudent(any(Student.class));
 
-    }
-@Test
-    @DisplayName("학생 삭제 성공")
-    void  testDelete_Delete() throws Exception{
+            mockMvc.perform(post("/templates/student")
+
+                            .param("id", "1")
+                            .param("name", " 수정된이름")
+                            .param("age", "77"))
+                    .andDo(print())
+                    .andExpect(status().is3xxRedirection())
+
+                    .andExpect(redirectedUrl("/templates/student"));
+
+            verify(studentService).updateStudent(any(Student.class));
+
+        }
+        @Test
+        @DisplayName("학생 삭제 성공")
+        void testDelete_Delete () throws Exception {
 //        given
 //    getstudent mock 설정추가
-    doNothing().when(studentService).deleteStudent(1L);
-    when(studentService.getStudent(1L)).thenReturn(testStudent);
+            doNothing().when(studentService).deleteStudent(1L);
+            when(studentService.getStudent(1L)).thenReturn(testStudent);
 //    when & then
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    mockMvc.perform(post("/templates/student/1/delete"))
-            .andDo(print())
-            .andExpect(status().is3xxRedirection())
-            .andExpect(redirectedUrl("/templates/student"));
-=======
-=======
->>>>>>> f2/vaild
-    mockMvc.perform(post("/studentfinal/1/delete"))
-            .andDo(print())
-            .andExpect(status().is3xxRedirection())
-            .andExpect(redirectedUrl("/studentfinal"));
-<<<<<<< HEAD
->>>>>>> f2/vaild
-=======
->>>>>>> f2/vaild
-=======
-    mockMvc.perform(post("/templates/student/1/delete"))
-            .andDo(print())
-            .andExpect(status().is3xxRedirection())
-            .andExpect(redirectedUrl("/templates/student"));
->>>>>>> f2/dbconn
 
-        verify(studentService).deleteStudent(1L);
-}
+            mockMvc.perform(post("/templates/student/1/delete"))
+                    .andDo(print())
+                    .andExpect(status().is3xxRedirection())
+                    .andExpect(redirectedUrl("/templates/student"));
 
-}
+
+            verify(studentService).deleteStudent(1L);
+        }
+
+    }
