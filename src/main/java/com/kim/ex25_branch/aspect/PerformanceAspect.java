@@ -11,7 +11,7 @@ import org.springframework.stereotype.Component;
 @Slf4j
 public class PerformanceAspect {
 
-
+//around 성능측정
     @Around("execution(* com.kim.ex25_branch.service.*.*(..))")
     public Object measureTime(ProceedingJoinPoint joinPoint) throws Throwable {
         long start = System.currentTimeMillis();
