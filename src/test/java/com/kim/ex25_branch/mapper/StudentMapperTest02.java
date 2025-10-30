@@ -14,11 +14,13 @@ public interface StudentMapperTest02 {
     @Select("SELECT * FROM student ORDER BY #{id} DESC")
     List<StudentTest> findAll();
 
-    @Select("SELECT * FROM student WHERE id = #{id}")
-    StudentTest findById(Long id);
+
 
     @Insert("INSERT INTO student(NAME, email, age) \r\n"
             + "  	VALUES (#{name}, #{email}, #{age})")
     @Options(useGeneratedKeys = true, keyProperty = "id")
     int insert(StudentTest student);
+
+    @Select("SELECT * FROM student where id=#{id} ")
+    StudentTest findById(Long id);
 }
